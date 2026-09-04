@@ -1,6 +1,6 @@
 # Frontend AI Skills
 
-A modular library of **70 frontend skills** for AI coding agents (Cursor, Claude Code, and similar tools).
+A modular library of frontend skills for AI coding agents (Cursor, Claude Code, and similar tools). It ships with **70 skills** today, and **contributors are encouraged to add more** (new skills and richer skill docs) via pull request.
 
 Each skill is a focused `SKILL.md` file an agent can load when working on architecture, React/Next.js, animation, 3D, accessibility, performance, testing, design-to-code, and more. Skills are independent so you can install everything or only the categories you need.
 
@@ -30,7 +30,7 @@ Each skill is a focused `SKILL.md` file an agent can load when working on archit
 |------|--------|
 | Purpose | Give AI agents production-oriented frontend guidance as reusable skills |
 | Format | One folder per skill, each with a `SKILL.md` |
-| Count | 70 skills (see `manifest.json`) |
+| Count | 70+ skills (see `manifest.json`; new skills welcome) |
 | Install | Copy skills into a project or a global skills directory via `install/` |
 | Not included | This is not an app or npm package — it is a skill/content library |
 
@@ -44,20 +44,20 @@ Use it when you want agents to follow consistent patterns for frontend engineeri
 frontend-ai-skills/
 ├── README.md                 # This file
 ├── CONTRIBUTING.md           # How to contribute (PRs required)
-├── manifest.json             # Machine-readable list of all 70 skills
+├── manifest.json             # Machine-readable list of every skill
 ├── .gitignore
-├── skills/                   # All skill definitions
+├── skills/                   # All skill definitions (add more anytime via PR)
 │   ├── 01-frontend-architecture/
 │   │   └── SKILL.md
 │   ├── 02-react/
 │   │   └── SKILL.md
-│   └── … (70 skill folders)
+│   └── … (numbered skill folders)
 ├── install/
 │   ├── README.md             # Installer notes
 │   ├── install.sh            # macOS / Linux / WSL
 │   └── install.ps1           # Windows PowerShell
 ├── scripts/
-│   ├── validate.sh           # Checks that all 70 SKILL.md files exist and look valid
+│   ├── validate.sh           # Validates SKILL.md files and manifest sync
 │   └── create-history.sh     # Maintainer helper (optional)
 └── .github/
     └── PULL_REQUEST_TEMPLATE.md
@@ -175,7 +175,7 @@ Used by `--category` in the installer:
 | `cinematic` | Scroll storytelling, sequences, video scrubbing, 3D scroll, motion quality | curated mix |
 | `3d` | Three.js, R3F, Drei, WebGL, GLSL, 3D scroll | 41–45, 48, 51 |
 | `quality` | A11y, security, performance, testing, debugging, web vitals, review | curated mix |
-| `all` | Every skill under `skills/` | 01–70 |
+| `all` | Every skill under `skills/` | all folders (including any added later) |
 
 ---
 
@@ -273,6 +273,8 @@ Used by `--category` in the installer:
 
 Open any skill at `skills/<name>/SKILL.md` for full guidance.
 
+Want to add skill `71+` or expand an existing `SKILL.md`? See [Contributing](#contributing) and [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 ---
 
 ## Recommended skill stacks
@@ -295,10 +297,12 @@ Open any skill at `skills/<name>/SKILL.md` for full guidance.
 
 ### `scripts/validate.sh`
 
-Validates the library:
+Validates the library (count can grow beyond 70):
 
-- Exactly **70** `SKILL.md` files under `skills/`
+- At least one `SKILL.md` under `skills/`
 - Each file has YAML front matter (`---`) and a markdown `#` heading
+- `manifest.json` `skill_count` matches the number of skills on disk
+- Every disk skill is listed in the manifest, and every manifest entry exists on disk
 
 ```bash
 ./scripts/validate.sh
@@ -319,7 +323,7 @@ Optional maintainer helper. Most contributors can ignore it. It is not part of n
 - `name` — folder name  
 - `path` — path to `SKILL.md`  
 - `title` — human-readable title  
-- top-level `skill_count` — should stay `70` when the set is complete  
+- top-level `skill_count` — must match the number of skills (update it when you add or remove one)
 
 Keep `manifest.json` in sync when you add, rename, or remove a skill.
 
@@ -327,17 +331,23 @@ Keep `manifest.json` in sync when you add, rename, or remove a skill.
 
 ## Contributing
 
-**All contributions must go through a pull request.** Do not push directly to `main`.
+**New skills and richer skill docs are welcome.** All changes go through a pull request — do not push directly to `main`.
+
+You can:
+
+- Add a new skill (`skills/71-…/SKILL.md` and beyond)
+- Expand any existing `skills/*/SKILL.md`
+- Improve README / install / contributing docs
 
 Quick path:
 
 1. Fork the repo  
 2. Create a branch from `main`  
-3. Make your changes  
+3. Add or expand skills/docs and update `manifest.json` when needed  
 4. Run `./scripts/validate.sh` if you touched skills  
 5. Open a PR against `main`  
 
-Full guidelines, skill format, and PR checklist: **[CONTRIBUTING.md](CONTRIBUTING.md)**
+Step-by-step skill format and checklist: **[CONTRIBUTING.md](CONTRIBUTING.md)**
 
 ---
 
