@@ -109,266 +109,130 @@ git clone https://github.com/JustineBijuPaul/frontend-ai-skills.git
 cd frontend-ai-skills
 ```
 
-### Install all skills (into the current project)
+### One-command install into your editor
+
+Pick your tool and run:
 
 ```bash
-./install/install.sh --project --all
-# or simply:
-./install/install.sh --all
+./install/install.sh --cursor --all       # Cursor  → ~/.cursor/skills
+./install/install.sh --claude --all       # Claude Code → ~/.claude/skills
+./install/install.sh --opencode --all     # OpenCode → ~/.config/opencode/skills
+./install/install.sh --codex --all        # Codex CLI → ~/.codex/skills
+./install/install.sh --agents --all       # shared agents path → ~/.agents/skills
+./install/install.sh --editors --all      # install into ALL of the above
 ```
 
-Default project destination: `./.ai-skills/frontend`
-
-### Install globally
-
-```bash
-./install/install.sh --global --all
-```
-
-- If `CLAUDE_HOME` is set → `$CLAUDE_HOME/skills/frontend`
-- Otherwise → `~/.ai-skills/frontend`
-
-### Install one category
-
-```bash
-./install/install.sh --category cinematic
-./install/install.sh --category core
-./install/install.sh --category animation
-./install/install.sh --category 3d
-./install/install.sh --category quality
-```
-
-### Install a single skill by folder name
-
-```bash
-./install/install.sh --category 22-gsap
-```
-
-### List available skill folders
-
-```bash
-./install/install.sh --list
-```
-
-### Windows (PowerShell)
+**Windows (PowerShell):**
 
 ```powershell
-.\install\install.ps1 -All
-.\install\install.ps1 -Project -All
-.\install\install.ps1 -Category cinematic
-.\install\install.ps1 -List
+.\install\install.ps1 -Cursor -All
+.\install\install.ps1 -Claude -All
+.\install\install.ps1 -OpenCode -All
+.\install\install.ps1 -Codex -All
+.\install\install.ps1 -Agents -All
+.\install\install.ps1 -Editors -All
 ```
 
-### After install
+After installing, restart or reload the editor/agent so skills are discovered.
 
-The generic installer writes to a neutral `.ai-skills/frontend` tree. Most editors do **not** read that path automatically — use the [Setup by editor / agent](#setup-by-editor--agent) section below to copy or symlink skills into the directory your tool expects. Details: [`install/README.md`](install/README.md).
+### Project-only install (current repo)
+
+```bash
+./install/install.sh --cursor-project --all
+./install/install.sh --claude-project --all
+./install/install.sh --opencode-project --all
+./install/install.sh --agents-project --all
+```
+
+### Install one category into an editor
+
+```bash
+./install/install.sh --cursor --category cinematic
+./install/install.sh --claude --category core
+./install/install.sh --opencode --category 3d
+./install/install.sh --codex --category quality
+```
+
+### Symlink (stay updated on `git pull`)
+
+```bash
+./install/install.sh --cursor --symlink --all
+./install/install.sh --claude --symlink --all
+```
+
+### Generic / custom destination
+
+```bash
+./install/install.sh --project --all          # ./.ai-skills/frontend
+./install/install.sh --global --all           # ~/.ai-skills/frontend
+./install/install.sh --to ~/my-skills --all   # any custom path
+./install/install.sh --list
+./install/install.sh --help
+```
+
+### Remote one-liners (clone + install)
+
+```bash
+# Cursor
+git clone --depth 1 https://github.com/JustineBijuPaul/frontend-ai-skills.git /tmp/frontend-ai-skills \
+  && /tmp/frontend-ai-skills/install/install.sh --cursor --all
+
+# Claude Code
+git clone --depth 1 https://github.com/JustineBijuPaul/frontend-ai-skills.git /tmp/frontend-ai-skills \
+  && /tmp/frontend-ai-skills/install/install.sh --claude --all
+
+# OpenCode
+git clone --depth 1 https://github.com/JustineBijuPaul/frontend-ai-skills.git /tmp/frontend-ai-skills \
+  && /tmp/frontend-ai-skills/install/install.sh --opencode --all
+
+# Codex
+git clone --depth 1 https://github.com/JustineBijuPaul/frontend-ai-skills.git /tmp/frontend-ai-skills \
+  && /tmp/frontend-ai-skills/install/install.sh --codex --all
+
+# All supported editors at once
+git clone --depth 1 https://github.com/JustineBijuPaul/frontend-ai-skills.git /tmp/frontend-ai-skills \
+  && /tmp/frontend-ai-skills/install/install.sh --editors --all
+```
+
+More installer details: [`install/README.md`](install/README.md).
 
 ---
 
 ## Setup by editor / agent
 
-These skills use the shared `SKILL.md` format. After cloning this repo, copy each `skills/<name>/` folder into the skills directory for your tool.
+| Tool | Command | Installs to |
+|------|---------|-------------|
+| **Cursor** | `./install/install.sh --cursor --all` | `~/.cursor/skills/` |
+| **Claude Code** | `./install/install.sh --claude --all` | `~/.claude/skills/` |
+| **OpenCode** | `./install/install.sh --opencode --all` | `~/.config/opencode/skills/` |
+| **Codex CLI** | `./install/install.sh --codex --all` | `~/.codex/skills/` |
+| **Agents (shared)** | `./install/install.sh --agents --all` | `~/.agents/skills/` |
+| **Everything** | `./install/install.sh --editors --all` | all personal paths above |
 
-Quick reference:
+| Tool | Project-only command | Installs to |
+|------|----------------------|-------------|
+| **Cursor** | `./install/install.sh --cursor-project --all` | `.cursor/skills/` |
+| **Claude Code** | `./install/install.sh --claude-project --all` | `.claude/skills/` |
+| **OpenCode** | `./install/install.sh --opencode-project --all` | `.opencode/skills/` |
+| **Codex / Agents** | `./install/install.sh --agents-project --all` | `.agents/skills/` |
 
-| Tool | Personal (all projects) | Project-only |
-|------|-------------------------|--------------|
-| **Cursor** | `~/.cursor/skills/` | `.cursor/skills/` |
-| **Claude Code** | `~/.claude/skills/` | `.claude/skills/` |
-| **OpenCode** | `~/.config/opencode/skills/` | `.opencode/skills/` |
-| **Codex CLI** | `~/.agents/skills/` (also `~/.codex/skills/`) | `.agents/skills/` |
-| **Other Agent Skills tools** | `~/.agents/skills/` | `.agents/skills/` |
-
-OpenCode also discovers Claude-compatible and agent-compatible paths (`~/.claude/skills/`, `~/.agents/skills/`, and their project equivalents).
-
-Replace `~/path/to/frontend-ai-skills` with your clone path in the commands below.
-
-### Cursor
-
-**Personal install (recommended — available in every project):**
-
-```bash
-git clone https://github.com/JustineBijuPaul/frontend-ai-skills.git
-cd frontend-ai-skills
-
-mkdir -p ~/.cursor/skills
-for d in skills/*/; do
-  name="$(basename "$d")"
-  mkdir -p "$HOME/.cursor/skills/$name"
-  cp "$d/SKILL.md" "$HOME/.cursor/skills/$name/SKILL.md"
-done
-```
-
-**Project-only install** (share with the repo):
-
-```bash
-mkdir -p .cursor/skills
-for d in /path/to/frontend-ai-skills/skills/*/; do
-  name="$(basename "$d")"
-  mkdir -p ".cursor/skills/$name"
-  cp "$d/SKILL.md" ".cursor/skills/$name/SKILL.md"
-done
-```
+OpenCode also discovers Claude-compatible and agent-compatible paths (`~/.claude/skills/`, `~/.agents/skills/`).
 
 Do **not** install into `~/.cursor/skills-cursor/` — that folder is reserved for Cursor’s built-in skills.
 
-Start a new Cursor chat (or reload the window) so the skills are picked up.
+### After install
 
-### Claude Code
-
-**Personal install:**
-
-```bash
-git clone https://github.com/JustineBijuPaul/frontend-ai-skills.git
-cd frontend-ai-skills
-
-mkdir -p ~/.claude/skills
-for d in skills/*/; do
-  name="$(basename "$d")"
-  mkdir -p "$HOME/.claude/skills/$name"
-  cp "$d/SKILL.md" "$HOME/.claude/skills/$name/SKILL.md"
-done
-```
-
-**Project-only install:**
-
-```bash
-mkdir -p .claude/skills
-for d in /path/to/frontend-ai-skills/skills/*/; do
-  name="$(basename "$d")"
-  mkdir -p ".claude/skills/$name"
-  cp "$d/SKILL.md" ".claude/skills/$name/SKILL.md"
-done
-```
-
-Restart Claude Code or use `/reload-skills` if your version supports it.
-
-### OpenCode
-
-**Personal install (OpenCode config dir):**
-
-```bash
-git clone https://github.com/JustineBijuPaul/frontend-ai-skills.git
-cd frontend-ai-skills
-
-mkdir -p ~/.config/opencode/skills
-for d in skills/*/; do
-  name="$(basename "$d")"
-  mkdir -p "$HOME/.config/opencode/skills/$name"
-  cp "$d/SKILL.md" "$HOME/.config/opencode/skills/$name/SKILL.md"
-done
-```
-
-**Project-only install:**
-
-```bash
-mkdir -p .opencode/skills
-for d in /path/to/frontend-ai-skills/skills/*/; do
-  name="$(basename "$d")"
-  mkdir -p ".opencode/skills/$name"
-  cp "$d/SKILL.md" ".opencode/skills/$name/SKILL.md"
-done
-```
-
-**Alternative:** install into `~/.claude/skills/` or `~/.agents/skills/` — OpenCode loads those locations as well.
-
-### Codex (OpenAI Codex CLI)
-
-**Personal install (preferred cross-agent path):**
-
-```bash
-git clone https://github.com/JustineBijuPaul/frontend-ai-skills.git
-cd frontend-ai-skills
-
-mkdir -p ~/.agents/skills
-for d in skills/*/; do
-  name="$(basename "$d")"
-  mkdir -p "$HOME/.agents/skills/$name"
-  cp "$d/SKILL.md" "$HOME/.agents/skills/$name/SKILL.md"
-done
-```
-
-**Also supported:** `$CODEX_HOME/skills/` (defaults to `~/.codex/skills/`).
-
-**Project-only install:**
-
-```bash
-mkdir -p .agents/skills
-for d in /path/to/frontend-ai-skills/skills/*/; do
-  name="$(basename "$d")"
-  mkdir -p ".agents/skills/$name"
-  cp "$d/SKILL.md" ".agents/skills/$name/SKILL.md"
-done
-```
-
-Restart Codex or use `/skills` in the TUI to confirm they appear.
-
-### Other editors / agents (Windsurf, Copilot-compatible, etc.)
-
-If your tool follows the Agent Skills convention, install into:
-
-```bash
-# Personal
-mkdir -p ~/.agents/skills
-for d in skills/*/; do
-  name="$(basename "$d")"
-  mkdir -p "$HOME/.agents/skills/$name"
-  cp "$d/SKILL.md" "$HOME/.agents/skills/$name/SKILL.md"
-done
-
-# Or project-local
-mkdir -p .agents/skills
-# …same copy loop into .agents/skills/
-```
-
-Check your tool’s docs for the exact skills path if discovery fails.
-
-### Symlink instead of copy (optional)
-
-To keep skills updated when you `git pull` this repo:
-
-```bash
-# Example: Cursor personal skills via symlink
-REPO="$HOME/path/to/frontend-ai-skills"
-mkdir -p ~/.cursor/skills
-for d in "$REPO"/skills/*/; do
-  name="$(basename "$d")"
-  ln -sfn "$d" "$HOME/.cursor/skills/$name"
-done
-```
-
-Use the same pattern with `~/.claude/skills`, `~/.config/opencode/skills`, or `~/.agents/skills`.
-
-### Category-only install into an editor
-
-Use the repo installer first, then copy from the output folder:
-
-```bash
-./install/install.sh --category cinematic
-# copies into ./.ai-skills/frontend/
-
-# then, e.g. for Cursor:
-mkdir -p ~/.cursor/skills
-for d in .ai-skills/frontend/*/; do
-  name="$(basename "$d")"
-  mkdir -p "$HOME/.cursor/skills/$name"
-  cp "$d/SKILL.md" "$HOME/.cursor/skills/$name/SKILL.md"
-done
-```
+- **Cursor:** start a new chat or reload the window  
+- **Claude Code:** restart or run `/reload-skills` if available  
+- **OpenCode / Codex:** restart the tool; Codex TUI: `/skills`  
 
 ### Verify
 
 ```bash
-# Cursor
 ls ~/.cursor/skills | wc -l
-
-# Claude Code
 ls ~/.claude/skills | wc -l
-
-# OpenCode
 ls ~/.config/opencode/skills | wc -l
-
-# Codex / shared agents path
+ls ~/.codex/skills | wc -l
 ls ~/.agents/skills | wc -l
 ```
 
