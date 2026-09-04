@@ -32,7 +32,7 @@ Each skill is a focused `SKILL.md` file an agent can load when working on archit
 | Purpose | Give AI agents production-oriented frontend guidance as reusable skills |
 | Format | One folder per skill, each with a `SKILL.md` |
 | Count | 70+ skills (see `manifest.json`; new skills welcome) |
-| Install | Copy skills into a project or a global skills directory via `install/` |
+| Install | One command into Cursor / Claude Code / OpenCode / Codex via `install/install.sh` |
 | Not included | This is not an app or npm package — it is a skill/content library |
 
 Use it when you want agents to follow consistent patterns for frontend engineering, cinematic scroll experiences, WebGL/Three.js, quality, and AI-assisted UI workflows.
