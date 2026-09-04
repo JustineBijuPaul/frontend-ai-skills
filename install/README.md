@@ -1,38 +1,65 @@
 # Installers
 
-Copy skills from this repo into a neutral destination so AI coding tools can pick them up.
+Install skills into AI coding editors with one command.
 
-## `install.sh` (macOS / Linux / WSL)
+## Quick commands (macOS / Linux / WSL)
 
 ```bash
-./install/install.sh --all
-./install/install.sh --project --all
-./install/install.sh --global --all
-./install/install.sh --category cinematic
+git clone https://github.com/JustineBijuPaul/frontend-ai-skills.git
+cd frontend-ai-skills
+
+./install/install.sh --cursor --all      # Cursor
+./install/install.sh --claude --all      # Claude Code
+./install/install.sh --opencode --all    # OpenCode
+./install/install.sh --codex --all       # Codex CLI
+./install/install.sh --agents --all      # ~/.agents/skills (shared)
+./install/install.sh --editors --all     # all of the above
+```
+
+Project-only (current directory):
+
+```bash
+./install/install.sh --cursor-project --all
+./install/install.sh --claude-project --all
+./install/install.sh --opencode-project --all
+./install/install.sh --agents-project --all
+```
+
+## Windows PowerShell
+
+```powershell
+git clone https://github.com/JustineBijuPaul/frontend-ai-skills.git
+cd frontend-ai-skills
+
+.\install\install.ps1 -Cursor -All
+.\install\install.ps1 -Claude -All
+.\install\install.ps1 -OpenCode -All
+.\install\install.ps1 -Codex -All
+.\install\install.ps1 -Agents -All
+.\install\install.ps1 -Editors -All
+```
+
+## Other useful flags
+
+```bash
+./install/install.sh --cursor --category cinematic
+./install/install.sh --claude --symlink --all
+./install/install.sh --to ~/my-custom-skills --all
 ./install/install.sh --list
 ./install/install.sh --help
 ```
 
-| Flag | Effect |
-|------|--------|
-| `--all` | Install every skill under `skills/` |
-| `--project` | Write to `$PWD/.ai-skills/frontend` (default target) |
-| `--global` | Write to `$CLAUDE_HOME/skills/frontend` or `~/.ai-skills/frontend` |
-| `--category NAME` | Install a named group (`core`, `animation`, `cinematic`, `3d`, `quality`) or a single skill folder name |
-| `--list` | Print skill folder names |
+| Flag | Destination |
+|------|-------------|
+| `--cursor` | `~/.cursor/skills` |
+| `--claude` | `~/.claude/skills` |
+| `--opencode` | `~/.config/opencode/skills` |
+| `--codex` | `~/.codex/skills` (or `$CODEX_HOME/skills`) |
+| `--agents` | `~/.agents/skills` |
+| `--editors` | all personal editor paths |
+| `--project` | `./.ai-skills/frontend` |
+| `--global` | `~/.ai-skills/frontend` |
+| `--to PATH` | custom path |
+| `--symlink` | symlink instead of copy |
 
-## `install.ps1` (Windows PowerShell)
-
-```powershell
-.\install\install.ps1 -All
-.\install\install.ps1 -Project -All
-.\install\install.ps1 -Global -All
-.\install\install.ps1 -Category cinematic
-.\install\install.ps1 -List
-```
-
-## Destination notes
-
-The installer uses `.ai-skills/frontend` on purpose: different agents expose different skill directories across versions. After install, copy or symlink those folders into the path your current tool expects.
-
-See the root [README.md](../README.md) for the full catalog, categories, and contribution guide.
+See the root [README.md](../README.md) for the full setup guide and skill catalog.
