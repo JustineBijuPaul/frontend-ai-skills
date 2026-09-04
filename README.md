@@ -353,4 +353,6 @@ Step-by-step skill format and checklist: **[CONTRIBUTING.md](CONTRIBUTING.md)**
 
 ## License
 
-No separate license file is published in this repository yet. If you plan to use or redistribute this project in a commercial or public product, open an issue or PR to clarify licensing with the maintainers.
+This project is licensed under the [MIT License](LICENSE).
+
+You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software, provided the copyright notice and permission notice are included in all copies or substantial portions of the Software.
