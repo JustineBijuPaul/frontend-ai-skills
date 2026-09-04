@@ -1,6 +1,6 @@
 # Frontend AI Skills
 
-A modular library of frontend skills for AI coding agents (Cursor, Claude Code, and similar tools). It ships with **70 skills** today, and **contributors are encouraged to add more** (new skills and richer skill docs) via pull request.
+A modular library of frontend skills for AI coding agents. It ships with **70 skills** today, and **contributors are encouraged to add more** (new skills and richer skill docs) via pull request.
 
 Each skill is a focused `SKILL.md` file an agent can load when working on architecture, React/Next.js, animation, 3D, accessibility, performance, testing, design-to-code, and more. Skills are independent so you can install everything or only the categories you need.
 
@@ -160,7 +160,7 @@ Default project destination: `./.ai-skills/frontend`
 
 ### After install
 
-The installer writes to a neutral `.ai-skills/frontend` tree so it stays tool-agnostic. Copy or symlink those folders into whatever skills/instructions directory your agent expects (Cursor, Claude, etc.). Details: [`install/README.md`](install/README.md).
+The installer writes to a neutral `.ai-skills/frontend` tree so it stays tool-agnostic. Copy or symlink those folders into whatever skills/instructions directory your coding agent expects. Details: [`install/README.md`](install/README.md).
 
 ---
 
