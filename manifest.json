@@ -1,0 +1,357 @@
+{
+  "name": "frontend-ai-skills",
+  "version": "1.0.0",
+  "skill_count": 70,
+  "skills": [
+    {
+      "name": "01-frontend-architecture",
+      "path": "skills/01-frontend-architecture/SKILL.md",
+      "title": "Frontend Architecture"
+    },
+    {
+      "name": "02-react",
+      "path": "skills/02-react/SKILL.md",
+      "title": "React"
+    },
+    {
+      "name": "03-nextjs",
+      "path": "skills/03-nextjs/SKILL.md",
+      "title": "Next.js"
+    },
+    {
+      "name": "04-typescript",
+      "path": "skills/04-typescript/SKILL.md",
+      "title": "TypeScript"
+    },
+    {
+      "name": "05-html",
+      "path": "skills/05-html/SKILL.md",
+      "title": "HTML"
+    },
+    {
+      "name": "06-css",
+      "path": "skills/06-css/SKILL.md",
+      "title": "CSS"
+    },
+    {
+      "name": "07-responsive-design",
+      "path": "skills/07-responsive-design/SKILL.md",
+      "title": "Responsive Design"
+    },
+    {
+      "name": "08-ui-ux-design",
+      "path": "skills/08-ui-ux-design/SKILL.md",
+      "title": "UI/UX Design"
+    },
+    {
+      "name": "09-design-systems",
+      "path": "skills/09-design-systems/SKILL.md",
+      "title": "Design Systems"
+    },
+    {
+      "name": "10-component-engineering",
+      "path": "skills/10-component-engineering/SKILL.md",
+      "title": "Component Engineering"
+    },
+    {
+      "name": "11-accessibility",
+      "path": "skills/11-accessibility/SKILL.md",
+      "title": "Accessibility"
+    },
+    {
+      "name": "12-forms-validation",
+      "path": "skills/12-forms-validation/SKILL.md",
+      "title": "Forms and Validation"
+    },
+    {
+      "name": "13-api-integration",
+      "path": "skills/13-api-integration/SKILL.md",
+      "title": "API Integration"
+    },
+    {
+      "name": "14-state-management",
+      "path": "skills/14-state-management/SKILL.md",
+      "title": "State Management"
+    },
+    {
+      "name": "15-data-fetching",
+      "path": "skills/15-data-fetching/SKILL.md",
+      "title": "Data Fetching"
+    },
+    {
+      "name": "16-frontend-security",
+      "path": "skills/16-frontend-security/SKILL.md",
+      "title": "Frontend Security"
+    },
+    {
+      "name": "17-frontend-performance",
+      "path": "skills/17-frontend-performance/SKILL.md",
+      "title": "Frontend Performance"
+    },
+    {
+      "name": "18-image-optimization",
+      "path": "skills/18-image-optimization/SKILL.md",
+      "title": "Image Optimization"
+    },
+    {
+      "name": "19-video-optimization",
+      "path": "skills/19-video-optimization/SKILL.md",
+      "title": "Video Optimization"
+    },
+    {
+      "name": "20-browser-apis",
+      "path": "skills/20-browser-apis/SKILL.md",
+      "title": "Browser APIs"
+    },
+    {
+      "name": "21-animation-fundamentals",
+      "path": "skills/21-animation-fundamentals/SKILL.md",
+      "title": "Animation Fundamentals"
+    },
+    {
+      "name": "22-gsap",
+      "path": "skills/22-gsap/SKILL.md",
+      "title": "GSAP"
+    },
+    {
+      "name": "23-gsap-scrolltrigger",
+      "path": "skills/23-gsap-scrolltrigger/SKILL.md",
+      "title": "GSAP ScrollTrigger"
+    },
+    {
+      "name": "24-lenis",
+      "path": "skills/24-lenis/SKILL.md",
+      "title": "Lenis Smooth Scroll"
+    },
+    {
+      "name": "25-framer-motion",
+      "path": "skills/25-framer-motion/SKILL.md",
+      "title": "Framer Motion"
+    },
+    {
+      "name": "26-motion-react",
+      "path": "skills/26-motion-react/SKILL.md",
+      "title": "Motion for React"
+    },
+    {
+      "name": "27-scroll-storytelling",
+      "path": "skills/27-scroll-storytelling/SKILL.md",
+      "title": "Scroll Storytelling"
+    },
+    {
+      "name": "28-image-sequence-scroll",
+      "path": "skills/28-image-sequence-scroll/SKILL.md",
+      "title": "Image Sequence Scroll"
+    },
+    {
+      "name": "29-video-scroll-scrubbing",
+      "path": "skills/29-video-scroll-scrubbing/SKILL.md",
+      "title": "Video Scroll Scrubbing"
+    },
+    {
+      "name": "30-canvas-animation",
+      "path": "skills/30-canvas-animation/SKILL.md",
+      "title": "Canvas Animation"
+    },
+    {
+      "name": "31-svg-animation",
+      "path": "skills/31-svg-animation/SKILL.md",
+      "title": "SVG Animation"
+    },
+    {
+      "name": "32-text-animation",
+      "path": "skills/32-text-animation/SKILL.md",
+      "title": "Text Animation"
+    },
+    {
+      "name": "33-parallax",
+      "path": "skills/33-parallax/SKILL.md",
+      "title": "Parallax"
+    },
+    {
+      "name": "34-horizontal-scroll",
+      "path": "skills/34-horizontal-scroll/SKILL.md",
+      "title": "Horizontal Scroll"
+    },
+    {
+      "name": "35-pinned-scroll",
+      "path": "skills/35-pinned-scroll/SKILL.md",
+      "title": "Pinned Scroll"
+    },
+    {
+      "name": "36-scroll-progress",
+      "path": "skills/36-scroll-progress/SKILL.md",
+      "title": "Scroll Progress"
+    },
+    {
+      "name": "37-micro-interactions",
+      "path": "skills/37-micro-interactions/SKILL.md",
+      "title": "Micro Interactions"
+    },
+    {
+      "name": "38-page-transitions",
+      "path": "skills/38-page-transitions/SKILL.md",
+      "title": "Page Transitions"
+    },
+    {
+      "name": "39-loading-experiences",
+      "path": "skills/39-loading-experiences/SKILL.md",
+      "title": "Loading Experiences"
+    },
+    {
+      "name": "40-cursor-effects",
+      "path": "skills/40-cursor-effects/SKILL.md",
+      "title": "Cursor Effects"
+    },
+    {
+      "name": "41-threejs",
+      "path": "skills/41-threejs/SKILL.md",
+      "title": "Three.js"
+    },
+    {
+      "name": "42-react-three-fiber",
+      "path": "skills/42-react-three-fiber/SKILL.md",
+      "title": "React Three Fiber"
+    },
+    {
+      "name": "43-drei",
+      "path": "skills/43-drei/SKILL.md",
+      "title": "Drei"
+    },
+    {
+      "name": "44-webgl",
+      "path": "skills/44-webgl/SKILL.md",
+      "title": "WebGL"
+    },
+    {
+      "name": "45-glsl-shaders",
+      "path": "skills/45-glsl-shaders/SKILL.md",
+      "title": "GLSL Shaders"
+    },
+    {
+      "name": "46-lottie",
+      "path": "skills/46-lottie/SKILL.md",
+      "title": "Lottie"
+    },
+    {
+      "name": "47-sprite-animation",
+      "path": "skills/47-sprite-animation/SKILL.md",
+      "title": "Sprite Animation"
+    },
+    {
+      "name": "48-3d-scroll-storytelling",
+      "path": "skills/48-3d-scroll-storytelling/SKILL.md",
+      "title": "3D Scroll Storytelling"
+    },
+    {
+      "name": "49-responsive-animation",
+      "path": "skills/49-responsive-animation/SKILL.md",
+      "title": "Responsive Animation"
+    },
+    {
+      "name": "50-motion-accessibility",
+      "path": "skills/50-motion-accessibility/SKILL.md",
+      "title": "Motion Accessibility"
+    },
+    {
+      "name": "51-animation-performance",
+      "path": "skills/51-animation-performance/SKILL.md",
+      "title": "Animation Performance"
+    },
+    {
+      "name": "52-mobile-animation",
+      "path": "skills/52-mobile-animation/SKILL.md",
+      "title": "Mobile Animation"
+    },
+    {
+      "name": "53-touch-interactions",
+      "path": "skills/53-touch-interactions/SKILL.md",
+      "title": "Touch Interactions"
+    },
+    {
+      "name": "54-visual-regression",
+      "path": "skills/54-visual-regression/SKILL.md",
+      "title": "Visual Regression"
+    },
+    {
+      "name": "55-frontend-testing",
+      "path": "skills/55-frontend-testing/SKILL.md",
+      "title": "Frontend Testing"
+    },
+    {
+      "name": "56-browser-debugging",
+      "path": "skills/56-browser-debugging/SKILL.md",
+      "title": "Browser Debugging"
+    },
+    {
+      "name": "57-web-vitals",
+      "path": "skills/57-web-vitals/SKILL.md",
+      "title": "Web Vitals"
+    },
+    {
+      "name": "58-seo",
+      "path": "skills/58-seo/SKILL.md",
+      "title": "SEO"
+    },
+    {
+      "name": "59-pwa",
+      "path": "skills/59-pwa/SKILL.md",
+      "title": "PWA"
+    },
+    {
+      "name": "60-internationalization",
+      "path": "skills/60-internationalization/SKILL.md",
+      "title": "Internationalization"
+    },
+    {
+      "name": "61-component-documentation",
+      "path": "skills/61-component-documentation/SKILL.md",
+      "title": "Component Documentation"
+    },
+    {
+      "name": "62-frontend-refactoring",
+      "path": "skills/62-frontend-refactoring/SKILL.md",
+      "title": "Frontend Refactoring"
+    },
+    {
+      "name": "63-frontend-code-review",
+      "path": "skills/63-frontend-code-review/SKILL.md",
+      "title": "Frontend Code Review"
+    },
+    {
+      "name": "64-frontend-debugging",
+      "path": "skills/64-frontend-debugging/SKILL.md",
+      "title": "Frontend Debugging"
+    },
+    {
+      "name": "65-design-to-code",
+      "path": "skills/65-design-to-code/SKILL.md",
+      "title": "Design to Code"
+    },
+    {
+      "name": "66-screenshot-to-code",
+      "path": "skills/66-screenshot-to-code/SKILL.md",
+      "title": "Screenshot to Code"
+    },
+    {
+      "name": "67-figma-to-code",
+      "path": "skills/67-figma-to-code/SKILL.md",
+      "title": "Figma to Code"
+    },
+    {
+      "name": "68-ai-ui-generation",
+      "path": "skills/68-ai-ui-generation/SKILL.md",
+      "title": "AI UI Generation"
+    },
+    {
+      "name": "69-ai-frontend-workflow",
+      "path": "skills/69-ai-frontend-workflow/SKILL.md",
+      "title": "AI Frontend Workflow"
+    },
+    {
+      "name": "70-frontend-skill-router",
+      "path": "skills/70-frontend-skill-router/SKILL.md",
+      "title": "Frontend Skill Router"
+    }
+  ]
+}
